@@ -21,10 +21,13 @@ let hobbies: string[];
 
 hobbies = ["Sports", "Cooking"];
 
-let person: {
+type Person = {
   name: string;
   age: number;
 };
+
+
+let person: Person
 
 person = {
   name: "Isaac",
@@ -36,12 +39,9 @@ person = {
 // };
 
 // Array of objects(persons)
-let people: {
-  name: string;
-  age: number;
-}[];
+let people: Person[];
 
-//Type inference
+// Union Types
 
 let course: string | number = "React - The Complete guide";
 course = 12341;
