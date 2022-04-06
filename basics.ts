@@ -56,7 +56,7 @@ function print(value: any) {
   console.log(value);
 }
 
-// GeneratorFunctionConstructor
+// Generics
 
 // <T> allows TypeScript to look at the data types of the variables passed through the function
 function insertAtBeginning<T>(array: T[], value: T) {
@@ -71,3 +71,33 @@ const stringArray = insertAtBeginning(["a", "b", "c"], "d");
 
 // updatedArray[0].split('')
 stringArray[0].split("");
+
+// Classes
+
+class Student {
+  firstName: string;
+  lastName: string;
+  age: number;
+  private courses: string[];
+
+  constructor(first: string, last: string, age: number, courses: string[]) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.courses = courses;
+  }
+
+  enroll(courseName: string) {
+    this.courses.push(courseName);
+  }
+
+  lisCourses() {
+    return this.courses.slice();
+  }
+}
+
+const student = new Student("Isaac", "Rendon", 28, ["Angular"]);
+student.enroll("React");
+
+// Unavialble because we made courses private
+// student.courses;
