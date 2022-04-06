@@ -75,18 +75,24 @@ stringArray[0].split("");
 // Classes
 
 class Student {
-  firstName: string;
-  lastName: string;
-  age: number;
-  private courses: string[];
+  // firstName: string;
+  // lastName: string;
+  // age: number;
+  // private courses: string[];
 
-  constructor(first: string, last: string, age: number, courses: string[]) {
-    this.firstName = first;
-    this.lastName = last;
-    this.age = age;
-    this.courses = courses;
-  }
+  constructor(
+    // first: string, last: string, age: number, courses: string[]) {
+    //   this.firstName = first;
+    //   this.lastName = last;
+    //   this.age = age;
+    //   this.courses = courses;'
 
+    // Same thing as two code blocks above
+    public firstName: string,
+    public lastName: string,
+    public age: number,
+    private courses: string[]
+  ) {}
   enroll(courseName: string) {
     this.courses.push(courseName);
   }
