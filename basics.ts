@@ -26,8 +26,7 @@ type Person = {
   age: number;
 };
 
-
-let person: Person
+let person: Person;
 
 person = {
   name: "Isaac",
@@ -48,12 +47,27 @@ course = 12341;
 
 // Functions & Types
 
-function add(a:number ,b: number): number {
+function add(a: number, b: number): number {
   return a + b;
 }
 
-// Special Function with void type for return 
+// Special Function with void type for return
 function print(value: any) {
   console.log(value);
 }
 
+// GeneratorFunctionConstructor
+
+// <T> allows TypeScript to look at the data types of the variables passed through the function
+function insertAtBeginning<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray;
+}
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1);
+const stringArray = insertAtBeginning(["a", "b", "c"], "d");
+
+// updatedArray[0].split('')
+stringArray[0].split("");
