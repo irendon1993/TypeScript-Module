@@ -107,3 +107,29 @@ student.enroll("React");
 
 // Unavialble because we made courses private
 // student.courses;
+
+// Interfaces can be implemented by classes that force objects to have a certain structure
+interface Human {
+  firstName: string;
+  age: number;
+
+  greet: () => void;
+}
+
+let isaac: Human;
+
+isaac = {
+  firstName: "Isaac",
+  age: 28,
+  greet: () => {
+    console.log("Hello");
+  },
+};
+
+class Padawan implements Human {
+  firstName: string;
+  age: number;
+  greet() {
+    console.log("Howdy");
+  }
+}
